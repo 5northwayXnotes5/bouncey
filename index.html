@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Bouncey Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div id="ui-layer">
+        <div class="header">
+            <h1>BOUNCEY</h1>
+            <div class="status" id="status-text">Ready</div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Theme</label>
+                <select id="theme-select">
+                    <option value="neon">Neon Night</option>
+                    <option value="pastel">Pastel Dream</option>
+                    <option value="monochrome">Dark Mono</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Difficulty</label>
+                <input type="range" id="diff-slider" min="1" max="10" value="5">
+            </div>
+
+            <div class="control-group">
+                <label>Seed</label>
+                <div class="seed-input">
+                    <input type="text" id="seed-input" value="12345">
+                    <button id="btn-randomize">🎲</button>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="btn-reset">Reset / Preview</button>
+                <button id="btn-record" class="record-btn">Record (Short)</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
+
